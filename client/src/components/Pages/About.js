@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import "./styles/About.css";
 
-//working on my own branch
+//working on my own branch --> rahim
 
 const About = () => {
   const [data, setData] = useState({});
