@@ -1,23 +1,25 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
-import { useState, useEffect } from 'react';
-import Axios from 'axios';
+import { useState, useEffect } from "react";
+import Axios from "axios";
 import "./styles/About.css";
+
+//comment from rahim
 
 const About = () => {
   const [data, setData] = useState({});
   const [data1, setData1] = useState({});
   const [data2, setData2] = useState({});
   useEffect(() => {
-    Axios.get('http://localhost:3000/getreview').then((resp) =>
-      setData({ ...resp.data[0] }),
+    Axios.get("http://localhost:3000/getreview").then((resp) =>
+      setData({ ...resp.data[0] })
     );
-    Axios.get('http://localhost:3000/getreview').then((resp) =>
-      setData1({ ...resp.data[1] }),
+    Axios.get("http://localhost:3000/getreview").then((resp) =>
+      setData1({ ...resp.data[1] })
     );
-    Axios.get('http://localhost:3000/getreview').then((resp) =>
-      setData2({ ...resp.data[2] }),
+    Axios.get("http://localhost:3000/getreview").then((resp) =>
+      setData2({ ...resp.data[2] })
     );
   }, []);
 
@@ -48,7 +50,9 @@ const About = () => {
         <div className="row mt-4">
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
             <p style={{ fontSize: "25px", marginLeft: "10px" }}>
-              Our focus is on your overall well-being, offering luxurious flights at minimal costs. We provide state-of-the-art facilities in all our airways.
+              Our focus is on your overall well-being, offering luxurious
+              flights at minimal costs. We provide state-of-the-art facilities
+              in all our airways.
             </p>
             <br />
             <div className="row">
@@ -93,7 +97,8 @@ const About = () => {
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
             <img
               src={require("../../images/airhostess.jpg")}
-              width="950" style={{ borderRadius: '20px' }}
+              width="950"
+              style={{ borderRadius: "20px" }}
               height="650"
             />
           </div>
@@ -111,7 +116,11 @@ const About = () => {
           </div>
 
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
-            <h1 style={{ textAlign: 'center', fontSize: '40px' }}>Come fly with us and<br /> you could win the<br /> TRIP OF A LIFETIME</h1>
+            <h1 style={{ textAlign: "center", fontSize: "40px" }}>
+              Come fly with us and
+              <br /> you could win the
+              <br /> TRIP OF A LIFETIME
+            </h1>
           </div>
         </div>
       </section>
@@ -127,25 +136,42 @@ const About = () => {
           </div>
           <div className="row">
             <div className="col-lg-12 text-center">
-              <p style={{ color: "grey", fontSize: '30px' }}>What people say about us</p>
+              <p style={{ color: "grey", fontSize: "30px" }}>
+                What people say about us
+              </p>
             </div>
           </div>
         </div>
 
-        <Carousel style={{ height: '200px' }}>
+        <Carousel style={{ height: "200px" }}>
           <Carousel.Item interval={1000}>
-            <p className="align-items-center d-flex justify-content-center" style={{ fontSize: '25px' }}>
-              {data.fname}{" "}{data.lname}{": "}{data.review}
+            <p
+              className="align-items-center d-flex justify-content-center"
+              style={{ fontSize: "25px" }}
+            >
+              {data.fname} {data.lname}
+              {": "}
+              {data.review}
             </p>
           </Carousel.Item>
           <Carousel.Item interval={500}>
-            <p className="align-items-center d-flex justify-content-center" style={{ fontSize: '25px' }}>
-              {data1.fname}{" "}{data1.lname}{": "}{data1.review}
+            <p
+              className="align-items-center d-flex justify-content-center"
+              style={{ fontSize: "25px" }}
+            >
+              {data1.fname} {data1.lname}
+              {": "}
+              {data1.review}
             </p>
           </Carousel.Item>
           <Carousel.Item interval={500}>
-            <p className="align-items-center d-flex justify-content-center" style={{ fontSize: '25px' }}>
-              {data2.fname}{" "}{data2.lname}{": "}{data2.review}
+            <p
+              className="align-items-center d-flex justify-content-center"
+              style={{ fontSize: "25px" }}
+            >
+              {data2.fname} {data2.lname}
+              {": "}
+              {data2.review}
             </p>
           </Carousel.Item>
         </Carousel>
@@ -179,7 +205,9 @@ const About = () => {
 
               <div className="card-body white border-0">
                 <p style={{ fontSize: "22px" }}>
-                  We are providing you the most comfortable flights ever. You will feel home when you board the flight. The staff will treat you as their home members.
+                  We are providing you the most comfortable flights ever. You
+                  will feel home when you board the flight. The staff will treat
+                  you as their home members.
                 </p>
                 <button
                   type="button"
