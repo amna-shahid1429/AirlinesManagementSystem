@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#e8f0f8", padding: "20px" }}>
+    <div style={{padding: "20px" }}>
       {/* <section className="py-4">
         <div className="row align-items-center justify-content-center">
           <div className="col-lg-12 text-center">
