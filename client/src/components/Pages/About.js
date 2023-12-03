@@ -55,7 +55,7 @@ const About = () => {
               <div className="col-lg-1">
                 <img
                   src={require("../../images/nc1.png")}
-                  padding = "10px"
+                  paddingleft = "50px"
                   height="50px"
                   width="50px"
                 />
@@ -106,8 +106,9 @@ const About = () => {
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
             <img
               src={require("../../images/about1.jpg")}
-              width="1200px"
+              width="950px"
               style={{ borderRadius: "20px" }}
+              margin="50px"
             />
           </div>
 
