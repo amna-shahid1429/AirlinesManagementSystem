@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Slider />
-      <div className="row" style={{ marginTop: "35px" }}>
+      <div className="row" style={{ marginTop: "35px"}}>
         <div className="col-lg-4 align-items-center d-flex justify-content-center">
           <div className="white border-0" style={{ width: "40rem" }}>
             <div className="text-center">
@@ -20,8 +20,8 @@ const Home = () => {
               <div className="card-body white border-0">
                 <h5 className="card-title">
                   <strong style={{ fontSize: "25px" }}>
-                    <br/>Discover the destinations you can
-                    <br /> travel with FAST Airways
+                    <br/>Let's go places together
+                    <br />Discover the latest offers and news and start planning your next trip with us.
                   </strong>
                 </h5>
               </div>
@@ -81,10 +81,9 @@ const Home = () => {
             className=" text-center"
             style={{ width: "35rem" }}
           >
-            <h1>Exceptional experiences with FAST Airways</h1>
+            <h1>Start planning your next trip</h1>
             <h5>
-              Explore the world, earn rewards and live the best adventures with
-              FAST Airways.{" "}
+            Thinking of travelling somewhere soon? Here are some options to help you get started.{" "}
             </h5>
             <br></br>
             {/* <a href="contact.php"><button type="button" className="btn btn-primary">Contact us</button></a> */}
@@ -135,7 +134,7 @@ const Home = () => {
                   <div className="col-lg-6">
                     <div className="card-body">
                       <h5 className="card-title">
-                        <strong>Time flies on board FAST Airways</strong>
+                        <strong>Time flies when in our airways</strong>
                       </h5>
                       <p className="card-text">
                         Sit back, relax and enjoy your flight with our onboard
@@ -198,7 +197,7 @@ const Home = () => {
           >
             <div className="d-flex justify-content-center align-items-center h-100">
               <div className="text-white">
-                <h1 className="mb-3" style={{fontWeight:'800',marginTop:'20px'}}>Start your journey with FAST Airways</h1>
+                <h1 className="mb-3" style={{fontWeight:'800',marginTop:'20px'}}>Start your journey with our Collective Airline Index</h1>
                 <h4 className="mb-3" style={{fontSize:'20px'}}>Exclusive offers, special offers and amazing rewards await for premium membership holders</h4>
                 <a
                   className="btn btn-outline-light btn-lg"

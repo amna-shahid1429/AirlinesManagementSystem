@@ -24,48 +24,46 @@ const About = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#f0f8ff", padding: "20px" }}>
-      <section className="py-4">
+    <div style={{ padding: "20px" }}>
+      {/* <section className="py-4">
         <div className="row align-items-center justify-content-center">
           <div className="col-lg-12 text-center">
             <h2>About Us</h2>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="my-5">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12 text-center mt-4">
-              <h2>About Our Airways</h2>
+              <h2>Best project in FAST</h2>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h5>Our goals and values</h5>
+              <h5>Goals and values</h5>
             </div>
           </div>
         </div>
 
         <div className="row mt-4">
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
-            <p style={{ fontSize: "25px", marginLeft: "10px" }}>
-              Our focus is on your overall well-being, offering luxurious
-              flights at minimal costs. We provide state-of-the-art facilities
-              in all our airways.
-            </p>
+            {/* <p style={{ fontSize: "25px", marginLeft: "10px" }}>
+              Our focus is on your overall well-being, offering luxurious flights at minimal costs. We provide state-of-the-art facilities in all our airways.
+            </p> */}
             <br />
             <div className="row">
               <div className="col-lg-1">
                 <img
                   src={require("../../images/nc1.png")}
+                  paddingleft="50px"
                   height="50px"
                   width="50px"
                 />
               </div>
               <div className="col-lg-6">
                 {" "}
-                {/* change added over here  */}
                 <b style={{ fontSize: "25px", paddingLeft: "10px" }}>
                   Our Missions
                 </b>
@@ -87,9 +85,8 @@ const About = () => {
               </div>
               <div className="col-lg-6">
                 {" "}
-                {/* change added over here  */}
                 <b style={{ fontSize: "25px", paddingLeft: "20px" }}>
-                  Professionalism
+                  High Standards
                 </b>
                 <br />
                 <p style={{ fontSize: "20px", paddingLeft: "20px" }}>
@@ -116,16 +113,18 @@ const About = () => {
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
             <img
               src={require("../../images/about1.jpg")}
-              width="1200px"
+              width="950px"
               style={{ borderRadius: "20px" }}
+              margin="50px"
             />
           </div>
 
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
             <h1 style={{ textAlign: "center", fontSize: "40px" }}>
-              Come fly with us and
-              <br /> you could win the
-              <br /> TRIP OF A LIFETIME
+              Never miss an offer
+              <br />
+              Subscribe and be the first
+              <br /> to receive our exclusive offers.
             </h1>
           </div>
         </div>
@@ -211,9 +210,8 @@ const About = () => {
 
               <div className="card-body white border-0">
                 <p style={{ fontSize: "22px" }}>
-                  We are providing you the most comfortable flights ever. You
-                  will feel home when you board the flight. The staff will treat
-                  you as their home members.
+                  There’s nothing else quite like it Enjoy an unforgettable
+                  journey in the World’s Best Business Class.{" "}
                 </p>
                 <button
                   type="button"
