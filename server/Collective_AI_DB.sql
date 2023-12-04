@@ -31,6 +31,9 @@ INSERT INTO CLIENTS VALUES(7,'Alexander', 'Kenneth', 'Gray', '+9783317534912', '
 INSERT INTO CLIENTS VALUES(8,'Matthew', NULL, 'Reed', '+923317534913', 'matthewreed@gmail.com', '130');
 INSERT INTO CLIENTS VALUES(9,'Robert', NULL, 'Miller', '+943317534914', 'robertmiller@gmail.com', '131');
 INSERT INTO CLIENTS VALUES(10,'David', 'Walter', 'Young', '+923317534915', 'davidwalteryoung@gmail.com', '132');
+INSERT INTO CLIENTS VALUES(10,'David', 'Walter', 'Young', '+923317534915', 'davidwalteryoung@gmail.com', '132');
+INSERT INTO CLIENTS VALUES(11,'Abdul', 'Rahim', 'Imran', '+92332344915', 'abdulraheem@gmail.com', '132');
+
 
 create view client_view as select * from clients;
 select * from clients;

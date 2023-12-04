@@ -100,10 +100,10 @@ app.get("/booking/api/get", (req, res) => {
 //insert
 app.post("/api/post", (req, res) => {
   const { client_id, fname, mname, lname, phone, email, passport } = req.body;
-  const sqlInsert = "insert into clients values (?,?,?,?,?,?,?)";
+  const sqlInsert = "insert into clients values (?,?,?,?,?,?,?,?)";
   db.query(
     sqlInsert,
-    [client_id, fname, mname, lname, phone, email, passport],
+    [client_id, fname, mname, lname, phone, email, passport, password],
     (err, result) => {
       if (err) res.send({ err: err });
     }
