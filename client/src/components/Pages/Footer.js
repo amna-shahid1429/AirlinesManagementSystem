@@ -21,7 +21,7 @@ const Footer = () => {
 
         <section className="mb-4">
           <p>
-            <b>"Come Fly with us"</b>
+            <b>"Best Airline Index in the Middle East"</b>
           </p>
         </section>
 
