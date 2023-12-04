@@ -26,7 +26,7 @@ app.get("/api/get", (req, res) => {
 });
 
 app.get("/airplane/api/get", (req, res) => {
-  const sqlGet = "select * from airplanes;";
+  const sqlGet = "select * from airplane;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -34,7 +34,7 @@ app.get("/airplane/api/get", (req, res) => {
 });
 
 app.get("/flightStatus/api/get", (req, res) => {
-  const sqlGet = "select * from flightstatuses;";
+  const sqlGet = "select * from flightstatus;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -42,7 +42,7 @@ app.get("/flightStatus/api/get", (req, res) => {
 });
 
 app.get("/airport/api/get", (req, res) => {
-  const sqlGet = "select * from airports;";
+  const sqlGet = "select * from airport;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -50,7 +50,7 @@ app.get("/airport/api/get", (req, res) => {
 });
 
 app.get("/gates/api/get", (req, res) => {
-  const sqlGet = "select * from gate;";
+  const sqlGet = "select * from gates;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -58,7 +58,7 @@ app.get("/gates/api/get", (req, res) => {
 });
 
 app.get("/reviews/api/get", (req, res) => {
-  const sqlGet = "select * from reviews;";
+  const sqlGet = "select * from customer_review;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -66,7 +66,7 @@ app.get("/reviews/api/get", (req, res) => {
 });
 
 app.get("/schedule/api/get", (req, res) => {
-  const sqlGet = "select * from schedules;";
+  const sqlGet = "select * from schedule_table;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -74,7 +74,7 @@ app.get("/schedule/api/get", (req, res) => {
 });
 
 app.get("/flight/api/get", (req, res) => {
-  const sqlGet = "select * from flights;";
+  const sqlGet = "select * from flight;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -82,7 +82,7 @@ app.get("/flight/api/get", (req, res) => {
 });
 
 app.get("/ticket/api/get", (req, res) => {
-  const sqlGet = "select * from tickets;";
+  const sqlGet = "select * from ticket;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -90,7 +90,7 @@ app.get("/ticket/api/get", (req, res) => {
 });
 
 app.get("/booking/api/get", (req, res) => {
-  const sqlGet = "select * from bookings;";
+  const sqlGet = "select * from booking;";
   db.query(sqlGet, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -120,7 +120,7 @@ app.post("/airplane/api/post", (req, res) => {
 
 app.post("/schedule/api/post", (req, res) => {
   const { schedule_id, departure_time, arrival_time, duration_time } = req.body;
-  const sqlInsert = "insert into schedule values (?,?,?,?)";
+  const sqlInsert = "insert into schedule_table values (?,?,?,?)";
   db.query(
     sqlInsert,
     [schedule_id, departure_time, arrival_time, duration_time],
@@ -132,7 +132,7 @@ app.post("/schedule/api/post", (req, res) => {
 
 app.post("/flight/api/post", (req, res) => {
   const { flight_no, schedule_id, flightStatus_id, airplane_id } = req.body;
-  const sqlInsert = "insert into schedule values (?,?,?,?)";
+  const sqlInsert = "insert into flight values (?,?,?,?)";
   db.query(
     sqlInsert,
     [flight_no, schedule_id, flightStatus_id, airplane_id],
@@ -161,7 +161,7 @@ app.delete("/airplane/api/remove/:id", (req, res) => {
 
 app.delete("/schedule/api/remove/:id", (req, res) => {
   const { id } = req.params;
-  const sqlRemove = "delete from schedule where schedule_id=?";
+  const sqlRemove = "delete from schedule_table where schedule_id=?";
   db.query(sqlRemove, [id], (err, result) => {
     if (err) res.send({ err: err });
   });
@@ -232,7 +232,7 @@ app.get("/reviews/api/get/:id", (req, res) => {
 
 app.get("/schedule/api/get/:id", (req, res) => {
   const { id } = req.params;
-  const sqlGet = "select * from schedule where schedule_id=?;";
+  const sqlGet = "select * from schedule_table where schedule_id=?;";
   db.query(sqlGet, id, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -288,7 +288,7 @@ app.put("/schedule/api/update/:id", (req, res) => {
   const { id } = req.params;
   const { schedule_id, departure_time, arrival_time, duration_time } = req.body;
   const sqlUpdate =
-    "update schedule set schedule_id=?,departure_time=?,arrival_time=?,duration_time=? where schedule_id=?";
+    "update schedule_table set schedule_id=?,departure_time=?,arrival_time=?,duration_time=? where schedule_id=?";
   db.query(
     sqlUpdate,
     [schedule_id, departure_time, arrival_time, duration_time, id],
@@ -320,7 +320,7 @@ app.post("/login", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
   db.query(
-    "select * from admin where username=? and password=?",
+    "select * from admin_table where username=? and password=?",
     [username, password],
     (err, result) => {
       if (err) res.send({ err: err });
@@ -399,7 +399,7 @@ app.post("/BookTicket", (req, res) => {
   const classs = req.body.class;
   const price = req.body.price;
   const sqlInsert =
-    "insert into FlightBooking (departure,arrival,departureDate,returnDate,class,price) values (?,?,?,?,?,?)";
+    "insert into flightbooking (departure,arrival,departureDate,returnDate,class,price) values (?,?,?,?,?,?)";
   db.query(
     sqlInsert,
     [departure, arrival, departureDate, returnDate, classs, price],
@@ -434,7 +434,7 @@ app.post("/AvailableFlights", (req, res) => {
   console.log(fares.slice(2, 6));
 
   const sqlGet =
-    "select f.flight_no,s.schedule_id,f.airplane_id,a.max_seats,s.departure_time, s.arrival_time, fs.status,f.fares from Flight f inner join schedule s on s.schedule_id=f.schedule_id inner join FlightStatus fs on fs.flightStatus_id=f.flightStatus_id inner join airplane a on a.airplane_id=f.airplane_id where s.departure_time like  ? and s.arrival_time like ? and f.fares=?;";
+    "select f.flight_no,s.schedule_id,f.airplane_id,a.max_seats,s.departure_time, s.arrival_time, fs.status,f.fares from Flight f inner join schedule_table s on s.schedule_id=f.schedule_id inner join FlightStatus fs on fs.flightStatus_id=f.flightStatus_id inner join airplane a on a.airplane_id=f.airplane_id where s.departure_time like  ? and s.arrival_time like ? and f.fares=?;";
   db.query(
     sqlGet,
     [departureDate + "%", returnDate + "%", fares.slice(2, 6)],
@@ -449,7 +449,7 @@ app.post("/UpdateFlightBooking", (req, res) => {
   const id = req.body.id;
 
   const sqlUpdate =
-    "update FlightBooking set flight_no=(select f.flight_no from Flight f inner join schedule s on s.schedule_id=f.schedule_id where s.schedule_id=?) where flight_no is null;";
+    "update FlightBooking set flight_no=(select f.flight_no from Flight f inner join schedule_table s on s.schedule_id=f.schedule_id where s.schedule_id=?) where flight_no is null;";
   db.query(sqlUpdate, id, (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
@@ -478,7 +478,7 @@ app.post("/invoiceconfirm", (req, res) => {
   const departure = req.body.departure;
   console.log(id, departure);
   const sqlInsert =
-    "insert into ticket (seat_no,departure_time,gate_no,airport_code) select t.nm,s.departure_time,a.gate_no,a.airport_code from schedule s, tempseatgen t,airport a where s.schedule_id=? and a.airport_name=? order by rand() limit 1;";
+    "insert into ticket (seat_no,departure_time,gate_no,airport_code) select t.nm,s.departure_time,a.gate_no,a.airport_code from schedule_table s, seatgenerator t,airport a where s.schedule_id=? and a.airport_name=? order by rand() limit 1;";
   db.query(sqlInsert, [id, departure], (err, result) => {
     if (err) res.send({ err: err });
     else res.send(result);
