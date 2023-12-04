@@ -1,8 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
-import './styles/Sidebar.css'
-const Sidebar=() => {
+import React from "react";
+import { Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
+import "./styles/Sidebar.css";
+const Sidebar = () => {
   return (
     <Menu>
       <Link className="menu-item" to="/AdminPanel">

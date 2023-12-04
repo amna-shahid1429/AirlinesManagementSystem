@@ -21,9 +21,9 @@ const AddEditClient = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios
-      .get(`http://localhost:3000/api/get/${id}`)
-      .then((resp) => setState({ ...resp.data[0] }));
+    Axios.get(`http://localhost:5000/api/get/${id}`).then((resp) =>
+      setState({ ...resp.data[0] })
+    );
   }, [id]);
 
   const handleSubmit = (event) => {
@@ -39,19 +39,16 @@ const AddEditClient = () => {
     )
       toast.error("Required Fields are empty");
     else {
-      if(!id)
-      {
-
-        Axios
-          .post("http://localhost:3000/api/post", {
-            client_id,
-            fname,
-            mname,
-            lname,
-            phone,
-            email,
-            passport,
-          })
+      if (!id) {
+        Axios.post("http://localhost:5000/api/post", {
+          client_id,
+          fname,
+          mname,
+          lname,
+          phone,
+          email,
+          passport,
+        })
           .then((response) => {
             setState({
               client_id: "",
@@ -62,23 +59,20 @@ const AddEditClient = () => {
               email: "",
               passport: "",
             });
-            if(response.data.err)
-            console.log(response.data.err)
+            if (response.data.err) console.log(response.data.err);
           })
           .catch((err) => toast.error(err.response.data));
-          toast.success('Client Added Successfully');
-      }
-      else{
-        Axios
-          .put(`http://localhost:3000/api/update/${id}`, {
-            client_id,
-            fname,
-            mname,
-            lname,
-            phone,
-            email,
-            passport,
-          })
+        toast.success("Client Added Successfully");
+      } else {
+        Axios.put(`http://localhost:5000/api/update/${id}`, {
+          client_id,
+          fname,
+          mname,
+          lname,
+          phone,
+          email,
+          passport,
+        })
           .then((response) => {
             setState({
               client_id: "",
@@ -89,11 +83,10 @@ const AddEditClient = () => {
               email: "",
               passport: "",
             });
-            if(response.data.err)
-            console.log(response.data.err)
+            if (response.data.err) console.log(response.data.err);
           })
           .catch((err) => toast.error(err.response.data));
-          toast.success('Client Updated Successfully');
+        toast.success("Client Updated Successfully");
       }
       setTimeout(() => history.push("/Client"), 500);
     }
@@ -118,7 +111,9 @@ const AddEditClient = () => {
       >
         <label htmlFor="client-id">Client ID</label>
         <input
-          type="text" name="client_id" value={client_id || ""}
+          type="text"
+          name="client_id"
+          value={client_id || ""}
           placeholder="ID"
           required
           onChange={handleInputChange}
@@ -126,42 +121,54 @@ const AddEditClient = () => {
 
         <label htmlFor="fname">First Name</label>
         <input
-          type="text" name="fname" value={fname || ""}
+          type="text"
+          name="fname"
+          value={fname || ""}
           placeholder="First Name"
           onChange={handleInputChange}
         />
 
         <label htmlFor="mname">Middle Name</label>
         <input
-          type="text" name="mname" value={mname || ""}
+          type="text"
+          name="mname"
+          value={mname || ""}
           placeholder="Middle Name"
           onChange={handleInputChange}
         />
 
         <label htmlFor="lname">Last Name</label>
         <input
-          type="text" name="lname" value={lname || ""}
+          type="text"
+          name="lname"
+          value={lname || ""}
           placeholder="Last Name"
           onChange={handleInputChange}
         />
 
         <label htmlFor="phone">Phone</label>
         <input
-          type="number" name="phone" value={phone || ""}
+          type="number"
+          name="phone"
+          value={phone || ""}
           placeholder="Phone"
           onChange={handleInputChange}
         />
 
         <label htmlFor="email">Email</label>
         <input
-          type="email" name="email" value={email || ""}
+          type="email"
+          name="email"
+          value={email || ""}
           placeholder="Email"
           onChange={handleInputChange}
         />
 
         <label htmlFor="passport">Passport</label>
         <input
-          type="text" name="passport" value={passport || ""}
+          type="text"
+          name="passport"
+          value={passport || ""}
           placeholder="Passport"
           onChange={handleInputChange}
         />

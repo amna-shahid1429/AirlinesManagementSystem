@@ -2,50 +2,50 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import Axios from "axios";
 import "./styles/Invoice.css";
-import Swall from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swall from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const initialState = {
   sc_id: "",
   cl_id: "",
   price: "",
 };
 const Invoice = () => {
-  const Swal=withReactContent(Swall)
+  const Swal = withReactContent(Swall);
   const { id } = useParams();
   const [data, setData] = useState({});
   const [user, setUser] = useState({});
   const history = useHistory();
   const loadData = async () => {
     const Returnresponse = await Axios.get(
-      "http://localhost:3000/invoicefares"
+      "http://localhost:5000/invoicefares"
     );
     setUser(Returnresponse.data[0]);
-    
+
     initialState.departure = user.departure;
   };
 
   useEffect(() => {
     initialState.sc_id = id.slice(0, 2);
     initialState.cl_id = id.slice(2, 4);
-    Axios.post("http://localhost:3000/UpdateFlightBooking",{
-        id:initialState.sc_id,
-    })
-    Axios.get(`http://localhost:3000/invoice/${initialState.cl_id}`).then((resp) =>
-      setData({ ...resp.data[0] })
+    Axios.post("http://localhost:5000/UpdateFlightBooking", {
+      id: initialState.sc_id,
+    });
+    Axios.get(`http://localhost:5000/invoice/${initialState.cl_id}`).then(
+      (resp) => setData({ ...resp.data[0] })
     );
     loadData();
   }, []);
   const foo = async () => {
-    await Axios.post("http://localhost:3000/invoiceconfirm", {
+    await Axios.post("http://localhost:5000/invoiceconfirm", {
       id: initialState.sc_id,
       departure: user.departure,
     });
-    await Axios.post("http://localhost:3000/invoiceconfirmAgain", {
+    await Axios.post("http://localhost:5000/invoiceconfirmAgain", {
       id: initialState.cl_id,
       flight_no: user.flight_no,
       fares: user.price.substr(2, 6),
     });
-    Axios.delete('http://localhost:3000/removeSearch');
+    Axios.delete("http://localhost:5000/removeSearch");
     Swal.fire("Ticket Booked Successfully!", "", "success");
     setTimeout(() => history.push(`/BoardingPass/${id.slice(2, 4)}`), 500);
   };

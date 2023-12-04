@@ -12,19 +12,19 @@ const About = () => {
   const [data1, setData1] = useState({});
   const [data2, setData2] = useState({});
   useEffect(() => {
-    Axios.get("http://localhost:3000/getreview").then((resp) =>
+    Axios.get("http://localhost:5000/getreview").then((resp) =>
       setData({ ...resp.data[0] })
     );
-    Axios.get("http://localhost:3000/getreview").then((resp) =>
+    Axios.get("http://localhost:5000/getreview").then((resp) =>
       setData1({ ...resp.data[1] })
     );
-    Axios.get("http://localhost:3000/getreview").then((resp) =>
+    Axios.get("http://localhost:5000/getreview").then((resp) =>
       setData2({ ...resp.data[2] })
     );
   }, []);
 
   return (
-    <div style={{padding: "20px" }}>
+    <div style={{ padding: "20px" }}>
       {/* <section className="py-4">
         <div className="row align-items-center justify-content-center">
           <div className="col-lg-12 text-center">
@@ -49,7 +49,6 @@ const About = () => {
 
         <div className="row mt-4">
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
-
             {/* <p style={{ fontSize: "25px", marginLeft: "10px" }}>
               Our focus is on your overall well-being, offering luxurious flights at minimal costs. We provide state-of-the-art facilities in all our airways.
             </p> */}
@@ -59,19 +58,18 @@ const About = () => {
               <div className="col-lg-1">
                 <img
                   src={require("../../images/nc1.png")}
-
-                  paddingleft = "50px"
+                  paddingleft="50px"
                   height="50px"
                   width="50px"
                 />
               </div>
               <div className="col-lg-6">
                 {" "}
-
-                <b style={{ fontSize: "25px" , paddingLeft : "10px"}}>Our Missions</b>
+                <b style={{ fontSize: "25px", paddingLeft: "10px" }}>
+                  Our Missions
+                </b>
                 <br />
-                <p style={{ fontSize: "20px" , paddingLeft : "10px"}}>
-
+                <p style={{ fontSize: "20px", paddingLeft: "10px" }}>
                   To make our flights easy, comfortable, and reliable for you
                 </p>
               </div>
@@ -88,11 +86,11 @@ const About = () => {
               </div>
               <div className="col-lg-6">
                 {" "}
-
-                <b style={{ fontSize: "25px" , paddingLeft : "20px"}}>High Standards</b>
+                <b style={{ fontSize: "25px", paddingLeft: "20px" }}>
+                  High Standards
+                </b>
                 <br />
-                <p style={{ fontSize: "20px" , paddingLeft : "20px"}}>
-
+                <p style={{ fontSize: "20px", paddingLeft: "20px" }}>
                   Providing high-class facilities for every journey
                 </p>
               </div>
@@ -123,10 +121,12 @@ const About = () => {
           </div>
 
           <div className="col-lg-6 d-flex align-items-center justify-content-center">
-
-            <h1 style={{ textAlign: 'center', fontSize: '40px' }}>Never miss an offer
-<br />Subscribe and be the first<br />  to receive our exclusive offers.</h1>
-
+            <h1 style={{ textAlign: "center", fontSize: "40px" }}>
+              Never miss an offer
+              <br />
+              Subscribe and be the first
+              <br /> to receive our exclusive offers.
+            </h1>
           </div>
         </div>
       </section>
@@ -211,9 +211,9 @@ const About = () => {
 
               <div className="card-body white border-0">
                 <p style={{ fontSize: "22px" }}>
-
-                There’s nothing else quite like it
-              Enjoy an unforgettable journey in the World’s Best Business Class. </p>
+                  There’s nothing else quite like it Enjoy an unforgettable
+                  journey in the World’s Best Business Class.{" "}
+                </p>
 
                 <button
                   type="button"

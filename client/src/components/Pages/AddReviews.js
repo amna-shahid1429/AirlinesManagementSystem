@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import "./styles/Signin.css";
-import { useHistory,useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import Swale from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const initialState = {
@@ -11,7 +11,7 @@ const AddReviews = () => {
   const Swal = withReactContent(Swale);
   const [state, setState] = useState(initialState);
   const { review } = state;
-  const {id}=useParams();
+  const { id } = useParams();
   const history = useHistory();
 
   const handleInputChange = (event) => {
@@ -21,9 +21,9 @@ const AddReviews = () => {
 
   const Add = (event) => {
     event.preventDefault();
-    Axios.post(`http://localhost:3000/addreview/${id}`, {
-      id:id,
-      review:review,
+    Axios.post(`http://localhost:5000/addreview/${id}`, {
+      id: id,
+      review: review,
     }).then((response) => {
       if (response.data.msg) {
         Swal.fire("Invalid Login!", "", "error");
@@ -65,7 +65,6 @@ const AddReviews = () => {
               Submit Review
             </button>
           </div>
-          
         </div>
       </form>
     </div>

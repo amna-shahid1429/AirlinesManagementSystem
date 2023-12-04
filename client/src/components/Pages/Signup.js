@@ -61,36 +61,31 @@ class Signup extends Component {
       confirmPass: event.target.value,
     });
   };
-  encrypt()
-    {
-        let s=4;
-        var text=this.state.password;
-        console.log("text: " + text);
-        let result=""
-        for (let i = 0; i < text.length; i++)
-        {
-            let char = text[i];
-            if (char.toUpperCase(text[i]))
-            {
-                let ch =  String.fromCharCode((char.charCodeAt(0) + s-65) % 26 + 65);
-                result += ch;
-                this.setState({
-                  password:result
-                })
-            }
-            else
-            {
-                let ch = String.fromCharCode((char.charCodeAt(0) + s-97) % 26 + 97);
-                result += ch;
-                this.setState({
-                  password:result
-                })
-            }
-        }
-        console.log('result: ' + result);
-        
-        console.log(this.state.password)
+  encrypt() {
+    let s = 4;
+    var text = this.state.password;
+    console.log("text: " + text);
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+      let char = text[i];
+      if (char.toUpperCase(text[i])) {
+        let ch = String.fromCharCode(((char.charCodeAt(0) + s - 65) % 26) + 65);
+        result += ch;
+        this.setState({
+          password: result,
+        });
+      } else {
+        let ch = String.fromCharCode(((char.charCodeAt(0) + s - 97) % 26) + 97);
+        result += ch;
+        this.setState({
+          password: result,
+        });
+      }
     }
+    console.log("result: " + result);
+
+    console.log(this.state.password);
+  }
   register = (e) => {
     e.preventDefault();
     console.log(this.state.fname);
@@ -103,12 +98,10 @@ class Signup extends Component {
     console.log(this.state.confirmPass);
     console.log(this.state.password);
     this.encrypt();
-    if(this.state.password!==this.state.confirmPass)
-    Swal.fire("Password doesn't match confirm password!", "", "error");
-    else
-    {
-
-      Axios.post("http://localhost:3000/signup", {
+    if (this.state.password !== this.state.confirmPass)
+      Swal.fire("Password doesn't match confirm password!", "", "error");
+    else {
+      Axios.post("http://localhost:5000/signup", {
         fname: this.state.fname,
         mname: this.state.mname,
         lname: this.state.lname,
@@ -116,15 +109,15 @@ class Signup extends Component {
         email: this.state.email,
         passport: this.state.passport,
         password: this.state.password,
-      }).then((response) => {
-        console.log(response);
-        if (response.data.err) console.log(response.data.err);
-      }).catch((err)=> Swal.fire("Error in Signup!", "", "error"));
+      })
+        .then((response) => {
+          console.log(response);
+          if (response.data.err) console.log(response.data.err);
+        })
+        .catch((err) => Swal.fire("Error in Signup!", "", "error"));
       Swal.fire("Registered Successfully!", "", "success");
-      setTimeout(()=>this.props.history.push("/CustomerSignin"),500);
+      setTimeout(() => this.props.history.push("/CustomerSignin"), 500);
     }
-
-
   };
   render() {
     return (
@@ -139,7 +132,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g Daisy"
-                onChange={this.handleFname} style={{width:'320px'}}
+                onChange={this.handleFname}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -149,7 +143,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g brook"
-                onChange={this.handleMname} style={{width:'320px'}}
+                onChange={this.handleMname}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -159,7 +154,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g jenner"
-                onChange={this.handleLname} style={{width:'320px'}}
+                onChange={this.handleLname}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -169,7 +165,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g 923171234567"
-                onChange={this.handlePhone} style={{width:'320px'}}
+                onChange={this.handlePhone}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -179,7 +176,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g lily@example.com"
-                onChange={this.handleEmail} style={{width:'320px'}}
+                onChange={this.handleEmail}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -189,7 +187,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="Passport"
-                onChange={this.handlePassport} style={{width:'320px'}}
+                onChange={this.handlePassport}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -199,7 +198,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder="e.g H$*#&ArM"
-                onChange={this.handlePasswordChange} style={{width:'320px'}}
+                onChange={this.handlePasswordChange}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="form-group mt-3">
@@ -209,7 +209,8 @@ class Signup extends Component {
                 required
                 className="form-control mt-1"
                 placeholder=""
-                onChange={this.handleConfirmPass} style={{width:'320px'}}
+                onChange={this.handleConfirmPass}
+                style={{ width: "320px" }}
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -220,7 +221,7 @@ class Signup extends Component {
             <p className="forgot-password text-right mt-2">
               Already have an account?{" "}
               <Link to="/CustomerSignin">
-                <a href = ""> Login</a>
+                <a href=""> Login</a>
               </Link>
             </p>
           </div>
