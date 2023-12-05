@@ -26,13 +26,13 @@
 }
 .first{
 	border-radius: 8px;
-	border: 1.5px solid #78b9ff;
+	border: 1.5px solid #e82764;
 	color: #000;
 	background-color: #eaf4ff;
 }
 .second{
 	border-radius: 8px;
-	border: 1px solid #acacb0;
+	border: 1px solid #e82764;
 	color: #000;
 	background-color: #fff;
 }
@@ -40,15 +40,15 @@
 
 }
 .head{
-	color: #137ff3;
+	color: #e82764;
 	font-size: 12px;
 }
 .dollar{
 	font-size: 18px;
-	color: #097bf7;
+	color: #e82764;
 }
 .amount{
-	color: #007bff;
+	color: #e82764;
 	font-weight: bold;
 	font-size: 18px;
 
@@ -61,7 +61,7 @@
 
 }
 .back{
-	color: #aba4a4;
+	color: #bd8d8d;
 	font-size: 15px;
 	line-height: 73px;
 	font-weight: 400;

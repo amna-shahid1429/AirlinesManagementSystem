@@ -15,11 +15,11 @@ body{
   .ticket{
 	width: 600px;
 	height: 250px;
-	background: #FFB300;
+	background: #79243e;
 	border-radius: 3px;
 	box-shadow: 0 0 100px #aaa;
-	border-top: 1px solid #E89F3D;
-	border-bottom: 1px solid #E89F3D;
+	border-top: 1px solid #79243e;
+	border-bottom: 1px solid #79243e;
   }
   
   .left{
@@ -40,7 +40,7 @@ body{
 	margin-top: 8px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent; 
-	border-right: 5px solid #FFB300;
+	border-right: 5px solid #79243e;
   }
   
   .left li:nth-child(3),
@@ -98,14 +98,14 @@ body{
 	margin-left: 2px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent; 
-	border-right: 5px solid #FFB300;
+	border-right: 5px solid #79243e;
   }
   
   .left li:nth-child(14){
 	margin-top: 7px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent; 
-	border-right: 5px solid #FFB300;
+	border-right: 5px solid #79243e;
   }
   
   .right{
@@ -121,7 +121,7 @@ body{
 	margin-top: 8px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent; 
-	border-left: 5px solid #FFB300;
+	border-left: 5px solid #79243e;
   }
   
   .right li:nth-child(3),
@@ -178,7 +178,7 @@ body{
 	margin-top: 7px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent; 
-	border-left: 5px solid #FFB300;
+	border-left: 5px solid #79243e;
   }
   
   .ticket:after{
@@ -188,32 +188,32 @@ body{
 	top: 0px;
 	width: 2px;
 	height: 250px;
-	box-shadow: inset 0 0 0 #FFB300,
-	  inset 0 -10px 0 #B56E0A,
-	  inset 0 -20px 0 #FFB300,
-	  inset 0 -30px 0 #B56E0A,
-	  inset 0 -40px 0 #FFB300,
-	  inset 0 -50px 0 #999999,
-	  inset 0 -60px 0 #E5E5E5,
-	  inset 0 -70px 0 #999999,
-	  inset 0 -80px 0 #E5E5E5,
-	  inset 0 -90px 0 #999999,
-	  inset 0 -100px 0 #E5E5E5,
-	  inset 0 -110px 0 #999999,
-	  inset 0 -120px 0 #E5E5E5,
-	  inset 0 -130px 0 #999999,
-	  inset 0 -140px 0 #E5E5E5,
-	  inset 0 -150px 0 #B0B0B0,
-	  inset 0 -160px 0 #EEEEEE,
-	  inset 0 -170px 0 #B0B0B0,
-	  inset 0 -180px 0 #EEEEEE,
-	  inset 0 -190px 0 #B0B0B0,
-	  inset 0 -200px 0 #EEEEEE,
-	  inset 0 -210px 0 #B0B0B0,
-	  inset 0 -220px 0 #FFB300,
-	  inset 0 -230px 0 #B56E0A,
-	  inset 0 -240px 0 #FFB300,
-	  inset 0 -250px 0 #B56E0A;
+	box-shadow: inset 0 0 0 #79243e,
+	  inset 0 -10px 0 #4d0e21,
+	  inset 0 -20px 0 #79243e,
+	  inset 0 -30px 0 #511024,
+	  inset 0 -40px 0 #79243e,
+	  inset 0 -50px 0 #be6565,
+	  inset 0 -60px 0 #995555,
+	  inset 0 -70px 0 #be6565,
+	  inset 0 -80px 0 #995555,
+	  inset 0 -90px 0 #be6565,
+	  inset 0 -100px 0 #995555,
+	  inset 0 -110px 0 #be6565,
+	  inset 0 -120px 0 #995555,
+	  inset 0 -130px 0 #be6565,
+	  inset 0 -140px 0 #995555,
+	  inset 0 -150px 0 #be6565,
+	  inset 0 -160px 0 #995555,
+	  inset 0 -170px 0 #be6565,
+	  inset 0 -180px 0 #995555,
+	  inset 0 -190px 0 #be6565,
+	  inset 0 -200px 0 #995555,
+	  inset 0 -210px 0 #be6565,
+	  inset 0 -220px 0 #79243e,
+	  inset 0 -230px 0 #571327,
+	  inset 0 -240px 0 #79243e,
+	  inset 0 -250px 0 #541326;
   }
   
   .ticket:before{
@@ -224,32 +224,32 @@ body{
 	top: 0px;
 	width: 1px;
 	height: 250px;
-	box-shadow: inset 0 0 0 #FFB300,
-	  inset 0 -10px 0 #F4D483,
-	  inset 0 -20px 0 #FFB300,
-	  inset 0 -30px 0 #F4D483,
-	  inset 0 -40px 0 #FFB300,
-	  inset 0 -50px 0 #FFFFFF,
-	  inset 0 -60px 0 #E5E5E5,
-	  inset 0 -70px 0 #FFFFFF,
-	  inset 0 -80px 0 #E5E5E5,
-	  inset 0 -90px 0 #FFFFFF,
-	  inset 0 -100px 0 #E5E5E5,
-	  inset 0 -110px 0 #FFFFFF,
-	  inset 0 -120px 0 #E5E5E5,
-	  inset 0 -130px 0 #FFFFFF,
-	  inset 0 -140px 0 #E5E5E5,
-	  inset 0 -150px 0 #FFFFFF,
-	  inset 0 -160px 0 #EEEEEE,
-	  inset 0 -170px 0 #FFFFFF,
-	  inset 0 -180px 0 #EEEEEE,
-	  inset 0 -190px 0 #FFFFFF,
-	  inset 0 -200px 0 #EEEEEE,
-	  inset 0 -210px 0 #FFFFFF,
-	  inset 0 -220px 0 #FFB300,
-	  inset 0 -230px 0 #F4D483,
-	  inset 0 -240px 0 #FFB300,
-	  inset 0 -250px 0 #F4D483;
+	box-shadow: inset 0 0 0 #79243e,
+	inset 0 -10px 0 #4d0e21,
+	inset 0 -20px 0 #79243e,
+	inset 0 -30px 0 #511024,
+	inset 0 -40px 0 #79243e,
+	inset 0 -50px 0 #be6565,
+	inset 0 -60px 0 #995555,
+	inset 0 -70px 0 #be6565,
+	inset 0 -80px 0 #995555,
+	inset 0 -90px 0 #be6565,
+	inset 0 -100px 0 #995555,
+	inset 0 -110px 0 #be6565,
+	inset 0 -120px 0 #995555,
+	inset 0 -130px 0 #be6565,
+	inset 0 -140px 0 #995555,
+	inset 0 -150px 0 #be6565,
+	inset 0 -160px 0 #995555,
+	inset 0 -170px 0 #be6565,
+	inset 0 -180px 0 #995555,
+	inset 0 -190px 0 #be6565,
+	inset 0 -200px 0 #995555,
+	inset 0 -210px 0 #be6565,
+	inset 0 -220px 0 #79243e,
+	inset 0 -230px 0 #571327,
+	inset 0 -240px 0 #79243e,
+	inset 0 -250px 0 #541326;
   }
   
   .content{
@@ -267,7 +267,7 @@ body{
 	font-family: Arial;
 	font-size: 20px;
 	font-weight: bold;
-	color: rgba(0,0,102,1);
+	color: #995555;
   }
   
   .boarding{
@@ -276,7 +276,7 @@ body{
 	right: 220px;
 	font-family: Arial;
 	font-size: 18px;
-	color: rgba(255,255,255,0.6);
+	color: rgba(241, 175, 175, 0.6);
   }
   
   .jfk{
@@ -285,7 +285,7 @@ body{
 	left: 20px;
 	font-family: Arial;
 	font-size: 38px;
-	color: #222;
+	color: #67001F;
   }
   
   .sfo{
@@ -294,7 +294,7 @@ body{
 	left: 180px;
 	font-family: Arial;
 	font-size: 38px;
-	color: #222;
+	color: #67001F;
   }
   
   .plane{
@@ -304,7 +304,7 @@ body{
   }
   
   .sub-content{
-	background: #e5e5e5;
+	background: #995555;
 	width: 100%;
 	height: 100px;
 	position: absolute;
@@ -319,11 +319,11 @@ body{
 	font-family: Arial Narrow, Arial;
 	font-weight: bold;
 	font-size: 14px;
-	color: #999;
+	color: #995555;
   }
   
   .name span{
-	color: #555;
+	color: #753939;
 	font-size: 17px;
   }
   
@@ -334,11 +334,11 @@ body{
 	font-family: Arial Narrow, Arial;
 	font-weight: bold;
 	font-size: 14px;
-	color: #999;
+	color: #995555;
   }
   
   .flight span{
-	color: #555;
+	color: #7e4c4c;
 	font-size: 17px;
   }
   
@@ -349,11 +349,11 @@ body{
 	font-family: Arial Narrow, Arial;
 	font-weight: bold;
 	font-size: 14px;
-	color: #999;
+	color: #995555;
   }
   
   .gate span{
-	color: #555;
+	color: #784c4c;
 	font-size: 17px;
   }
   
@@ -365,11 +365,11 @@ body{
 	font-family: Arial Narrow, Arial;
 	font-weight: bold;
 	font-size: 14px;
-	color: #999;
+	color: #995555;
   }
   
   .seat span{
-	color: #555;
+	color: #7c4d4d;
 	font-size: 17px;
   }
   
@@ -380,11 +380,11 @@ body{
 	font-family: Arial Narrow, Arial;
 	font-weight: bold;
 	font-size: 14px;
-	color: #999;
+	color: #995555;
   }
   
   .boardingtime span{
-	color: #555;
+	color: #744949;
 	font-size: 17px;
   }
   
@@ -396,60 +396,60 @@ body{
 	width: 90px;
 	background: #222;
 	box-shadow: inset 0 1px 0 #FFB300, inset -2px 0 0 #FFB300,
-	  inset -4px 0 0 #222,
-	  inset -5px 0 0 #FFB300,
-	  inset -6px 0 0 #222,
-	  inset -9px 0 0 #FFB300,
-	  inset -12px 0 0 #222,
-	  inset -13px 0 0 #FFB300,
-	  inset -14px 0 0 #222,
-	  inset -15px 0 0 #FFB300,
-	  inset -16px 0 0 #222,
-	  inset -17px 0 0 #FFB300,
-	  inset -19px 0 0 #222,
-	  inset -20px 0 0 #FFB300,
-	  inset -23px 0 0 #222,
-	  inset -25px 0 0 #FFB300,
-	  inset -26px 0 0 #222,
-	  inset -26px 0 0 #FFB300,
-	  inset -27px 0 0 #222,
-	  inset -30px 0 0 #FFB300,
-	  inset -31px 0 0 #222,
-	  inset -33px 0 0 #FFB300,
-	  inset -35px 0 0 #222,
-	  inset -37px 0 0 #FFB300,
-	  inset -40px 0 0 #222,
-	  inset -43px 0 0 #FFB300,
-	  inset -44px 0 0 #222,
-	  inset -45px 0 0 #FFB300,
-	  inset -46px 0 0 #222,
-	  inset -48px 0 0 #FFB300,
-	  inset -49px 0 0 #222,
-	  inset -50px 0 0 #FFB300,
-	  inset -52px 0 0 #222,
-	  inset -54px 0 0 #FFB300,
-	  inset -55px 0 0 #222,
-	  inset -57px 0 0 #FFB300,
-	  inset -59px 0 0 #222,
-	  inset -61px 0 0 #FFB300,
-	  inset -64px 0 0 #222,
-	  inset -66px 0 0 #FFB300,
-	  inset -67px 0 0 #222,
-	  inset -68px 0 0 #FFB300,
-	  inset -69px 0 0 #222,
-	  inset -71px 0 0 #FFB300,
-	  inset -72px 0 0 #222,
-	  inset -73px 0 0 #FFB300,
-	  inset -75px 0 0 #222,
-	  inset -77px 0 0 #FFB300,
-	  inset -80px 0 0 #222,
-	  inset -82px 0 0 #FFB300,
-	  inset -83px 0 0 #222,
-	  inset -84px 0 0 #FFB300,
-	  inset -86px 0 0 #222,
-	  inset -88px 0 0 #FFB300,
-	  inset -89px 0 0 #222,
-	  inset -90px 0 0 #FFB300;
+	  inset -4px 0 0 #995555,
+	  inset -5px 0 0 #67001F,
+	  inset -6px 0 0 #995555,
+	  inset -9px 0 0 #67001F,
+	  inset -12px 0 0 #995555,
+	  inset -13px 0 0 #67001F,
+	  inset -14px 0 0 #995555,
+	  inset -15px 0 0 #67001F,
+	  inset -16px 0 0 #995555,
+	  inset -17px 0 0 #67001F,
+	  inset -19px 0 0 #995555,
+	  inset -20px 0 0 #67001F,
+	  inset -23px 0 0 #995555,
+	  inset -25px 0 0 #67001F,
+	  inset -26px 0 0 #995555,
+	  inset -26px 0 0 #67001F,
+	  inset -27px 0 0 #995555,
+	  inset -30px 0 0 #67001F,
+	  inset -31px 0 0 #995555,
+	  inset -33px 0 0 #67001F,
+	  inset -35px 0 0 #995555,
+	  inset -37px 0 0 #67001F,
+	  inset -40px 0 0 #995555,
+	  inset -43px 0 0 #67001F,
+	  inset -44px 0 0 #995555,
+	  inset -45px 0 0 #67001F,
+	  inset -46px 0 0 #995555,
+	  inset -48px 0 0 #67001F,
+	  inset -49px 0 0 #995555,
+	  inset -50px 0 0 #67001F,
+	  inset -52px 0 0 #995555,
+	  inset -54px 0 0 #67001F,
+	  inset -55px 0 0 #995555,
+	  inset -57px 0 0 #67001F,
+	  inset -59px 0 0 #995555,
+	  inset -61px 0 0 #67001F,
+	  inset -64px 0 0 #995555,
+	  inset -66px 0 0 #67001F,
+	  inset -67px 0 0 #995555,
+	  inset -68px 0 0 #67001F,
+	  inset -69px 0 0 #995555,
+	  inset -71px 0 0 #67001F,
+	  inset -72px 0 0 #995555,
+	  inset -73px 0 0 #67001F,
+	  inset -75px 0 0 #995555,
+	  inset -77px 0 0 #67001F,
+	  inset -80px 0 0 #995555,
+	  inset -82px 0 0 #67001F,
+	  inset -83px 0 0 #995555,
+	  inset -84px 0 0 #67001F,
+	  inset -86px 0 0 #995555,
+	  inset -88px 0 0 #67001F,
+	  inset -89px 0 0 #995555,
+	  inset -90px 0 0 #67001F;
   }
   
   .slip{

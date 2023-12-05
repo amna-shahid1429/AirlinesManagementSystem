@@ -11,8 +11,8 @@ function Slider() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 ><strong style={{fontSize: '40px'}}>Fly to Qatar with FAST Airways</strong></h3>
-          <p>Be there at the Wordlcup 2022 with FAST Airways and cheer your team to victory.</p>
+          <h3 ><strong style={{fontSize: '40px'}}>Fly to Istanbul with FlyHigh Airways</strong></h3>
+          <p>Start planning your next trip.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500} className={classes.item}>
