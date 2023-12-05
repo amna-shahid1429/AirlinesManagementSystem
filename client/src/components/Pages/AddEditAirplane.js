@@ -16,54 +16,43 @@ const AddEditAirplane = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios
-      .get(`http://localhost:3000/airplane/api/get/${id}`)
-      .then((resp) => setState({ ...resp.data[0] }));
+    Axios.get(`http://localhost:5000/airplane/api/get/${id}`).then((resp) =>
+      setState({ ...resp.data[0] })
+    );
   }, [id]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (
-      !airplane_id ||
-      !max_seats
-    )
-      toast.error("Required Fields are empty");
+    if (!airplane_id || !max_seats) toast.error("Required Fields are empty");
     else {
-      if(!id)
-      {
-
-        Axios
-          .post("http://localhost:3000/airplane/api/post", {
-            airplane_id,
-            max_seats,
-          })
+      if (!id) {
+        Axios.post("http://localhost:5000/airplane/api/post", {
+          airplane_id,
+          max_seats,
+        })
           .then((response) => {
             setState({
               airplane_id: "",
               max_seats: "",
             });
-            if(response.data.err)
-            console.log(response.data.err)
+            if (response.data.err) console.log(response.data.err);
           })
           .catch((err) => toast.error(err.response.data));
-          toast.success('Airplane Added Successfully');
-      }
-      else{
-        Axios
-          .put(`http://localhost:3000/airplane/api/update/${id}`, {
-            airplane_id,
-            max_seats,
-          })
+        toast.success("Airplane Added Successfully");
+      } else {
+        Axios.put(`http://localhost:5000/airplane/api/update/${id}`, {
+          airplane_id,
+          max_seats,
+        })
           .then((response) => {
             setState({
               airplane_id: "",
               max_seats: "",
             });
-            if(response.data.err)
-            console.log(response.data.err)
+            if (response.data.err) console.log(response.data.err);
           })
           .catch((err) => toast.error(err.response.data));
-          toast.success('Airplane Updated Successfully');
+        toast.success("Airplane Updated Successfully");
       }
       setTimeout(() => history.push("/Airplane"), 500);
     }
@@ -88,7 +77,9 @@ const AddEditAirplane = () => {
       >
         <label htmlFor="airplane-id">Airplane ID</label>
         <input
-          type="text" name="airplane_id" value={airplane_id || ""}
+          type="text"
+          name="airplane_id"
+          value={airplane_id || ""}
           placeholder="ID"
           required
           onChange={handleInputChange}
@@ -96,12 +87,13 @@ const AddEditAirplane = () => {
 
         <label htmlFor="max-seats">Max Seats</label>
         <input
-          type="text" name="max_seats" value={max_seats || ""}
+          type="text"
+          name="max_seats"
+          value={max_seats || ""}
           placeholder="Max Seats"
           onChange={handleInputChange}
         />
 
-        
         <input type="submit" value={id ? "Update" : "Add"} />
         <Link to="/Airplane">
           <input type="button" value="Back"></input>

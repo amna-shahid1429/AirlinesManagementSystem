@@ -10,23 +10,28 @@ import {
   MDBCardBody,
   MDBCardImage,
 } from "mdb-react-ui-kit";
-import './styles/CustomerPanel.css'
+import "./styles/CustomerPanel.css";
 import { useParams, Link } from "react-router-dom";
 const ViewProfile = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   useEffect(() => {
-    Axios.get(`http://localhost:3000/api/get/${id}`).then((resp) =>
+    Axios.get(`http://localhost:5000/api/get/${id}`).then((resp) =>
       setData({ ...resp.data[0] })
     );
   }, []);
   return (
     <div className="vh-100 bg-pic">
-      <MDBContainer  style={{margin:'0',marginLeft:'28%'}}>
+      <MDBContainer style={{ margin: "0", marginLeft: "28%" }}>
         <MDBRow className="justify-content-center">
           <MDBCol md="9" lg="7" xl="6" className="mt-8">
             <MDBCard
-              style={{ borderRadius: "15px", width: "800px", marginTop: "50%",height:'350px'}}
+              style={{
+                borderRadius: "15px",
+                width: "800px",
+                marginTop: "50%",
+                height: "350px",
+              }}
             >
               <MDBCardBody className="p-4">
                 <div className="d-flex text-black">
@@ -58,7 +63,11 @@ const ViewProfile = () => {
                       <Link to={`/CustomerPanel/${id}`}>
                         <button
                           className="flex-grow-0 btn "
-                          style={{ fontSize: "20px", backgroundColor:'blue',color:'white'}}
+                          style={{
+                            fontSize: "20px",
+                            backgroundColor: "blue",
+                            color: "white",
+                          }}
                         >
                           Back to Main
                         </button>

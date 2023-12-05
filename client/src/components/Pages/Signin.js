@@ -1,17 +1,16 @@
-import React,{Component} from 'react'
-import Axios from 'axios'
-import './styles/Signin.css';
-import { withRouter } from 'react-router-dom';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import React, { Component } from "react";
+import Axios from "axios";
+import "./styles/Signin.css";
+import { withRouter } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 class Signin extends Component {
-  Swal=withReactContent(Swal)
-  constructor(props)
-  {
+  Swal = withReactContent(Swal);
+  constructor(props) {
     super(props);
     this.state = {
-      usernameLogin: '',
-      passwordLogin: '',
+      usernameLogin: "",
+      passwordLogin: "",
     };
   }
 
@@ -26,32 +25,7 @@ class Signin extends Component {
       passwordLogin: event.target.value,
     });
   };
-  
-  Login=(event)=>{
-    event.preventDefault();
-    Axios.post('http://localhost:3000/login', {
-      username:this.state.usernameLogin,
-      password:this.state.passwordLogin,
-    }).then((response)=>{
-    if(response.data.msg)
-    {
-      Swal.fire(
-        'Invalid Login!',
-        '',
-        'error'
-      )
-    }
-    else
-    {
-      
-      Swal.fire(
-        'Login Success!',
-        '',
-        'success'
-      )
-        setTimeout(()=>this.props.history.push('/AdminPanel'),500); 
-    }
-  })
+
 
   }
   render (){
@@ -80,15 +54,12 @@ class Signin extends Component {
             <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#67001F' }}>
               Login
             </button>
-          </div>
-          <p className="forgot-password text-right mt-2">
-            Forgot <a href="Home">password?</a>
-          </p>
-        </div>
-      </form>
-    </div>
-    );
-    }
-};
 
-export default withRouter(Signin)
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default withRouter(Signin);

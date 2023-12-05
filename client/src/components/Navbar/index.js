@@ -17,6 +17,7 @@ const Navbar = () => {
         <NavMenu>
           <NavLink to="/BookTicket">View Flights</NavLink>
           <NavLink to="/about">About</NavLink>
+
           {/* <NavLink to="/contact-us">Contact</NavLink> */}
         </NavMenu>
         <NavBtn>
@@ -24,6 +25,7 @@ const Navbar = () => {
             <Dropdown.Toggle id="dropdown-basic" style={{ fontSize: '20px', marginTop: '-10px', height: '48px', backgroundColor: 'white', color: '#67001F' }}>
               Client Login
             </Dropdown.Toggle>
+
             <Dropdown.Menu>
               <Dropdown.Item><Link to='/sign-up'>Sign Up</Link></Dropdown.Item>
               <Dropdown.Item><Link to='/CustomerSignin'>Sign In</Link></Dropdown.Item>

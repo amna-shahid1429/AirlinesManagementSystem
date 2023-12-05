@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory,Link } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 import Axios from "axios";
 import "./styles/BoardingPass.css";
 const BoardingPass = () => {
@@ -8,7 +8,7 @@ const BoardingPass = () => {
   const [user, setUser] = useState({});
   const history = useHistory();
   useEffect(() => {
-    Axios.get(`http://localhost:3000/showPass/${id}`).then((resp) =>
+    Axios.get(`http://localhost:5000/showPass/${id}`).then((resp) =>
       setData({ ...resp.data[0] })
     );
   }, []);
@@ -124,7 +124,9 @@ const BoardingPass = () => {
               <span className="name">
                 PASSENGER NAME
                 <br />
-                <span>{data.fname}, {data.lname}</span>
+                <span>
+                  {data.fname}, {data.lname}
+                </span>
               </span>
               <span className="flight">
                 FLIGHT N&deg;
@@ -160,7 +162,9 @@ const BoardingPass = () => {
               <span className="name nameslip">
                 PASSENGER NAME
                 <br />
-                <span>{data.fname}, {data.lname}</span>
+                <span>
+                  {data.fname}, {data.lname}
+                </span>
               </span>
             </div>
           </div>
@@ -170,7 +174,12 @@ const BoardingPass = () => {
       </div>
       <div>
         <Link to={`/CustomerPanel/${id}`}>
-            <button className="btn btn-primary" style={{marginLeft:'57.5vw',marginTop:'62vh'}}>Back to Main</button>
+          <button
+            className="btn btn-primary"
+            style={{ marginLeft: "57.5vw", marginTop: "62vh" }}
+          >
+            Back to Main
+          </button>
         </Link>
       </div>
     </div>

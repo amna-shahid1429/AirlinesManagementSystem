@@ -20,7 +20,7 @@ const AddFlight = () => {
     if (!flight_no || !schedule_id || !flightStatus_id || !airplane_id)
       toast.error("Required Fields are empty");
     else {
-      Axios.post("http://localhost:3000/flight/api/post", {
+      Axios.post("http://localhost:5000/flight/api/post", {
         flight_no,
         schedule_id,
         flightStatus_id,

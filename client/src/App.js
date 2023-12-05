@@ -1,17 +1,19 @@
-import {Switch,Route, BrowserRouter} from "react-router-dom"; 
-import {ToastContainer} from 'react-toastify';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import 'react-toastify/dist/ReactToastify.css';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Pages/Home";
+
 // import Contact from "./components/Pages/Contact"
 import About from './components/Pages/About'
 import Signin from './components/Pages/Signin'
+
 import Signup from "./components/Pages/Signup";
 import Client from "./components/Pages/Client";
 import Navbar from "./components/Navbar";
 import AddEditClient from "./components/Pages/AddEditClient";
-import ViewClient from './components/Pages/ViewClient'
+import ViewClient from "./components/Pages/ViewClient";
 import AdminPanel from "./components/Pages/AdminPanel";
 import AddEditAirplane from "./components/Pages/AddEditAirplane";
 import ViewAirplane from "./components/Pages/ViewAirplane";
@@ -46,6 +48,7 @@ import Booking from "./components/Pages/Booking";
 function App() {
   return (
     <BrowserRouter>
+
         <ToastContainer position='top-center'/>
         <Switch>
           <Route path='/signin' component={Signin}/>
@@ -96,6 +99,7 @@ function App() {
           {/* <Route path='/contact-us' component={Contact}/> */}
           </>
         </Switch>
+
     </BrowserRouter>
   );
 }

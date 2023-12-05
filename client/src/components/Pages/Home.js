@@ -8,7 +8,9 @@ const Home = () => {
     <>
       <Slider />
 
+
       <div className="row" style={{ marginTop: "35px" }}>
+
         <div className="col-lg-4 align-items-center d-flex justify-content-center">
           <div className="card border-0" style={{ width: "40rem", backgroundColor: "#f0f0f0" }}>
             <div className="text-center">
@@ -19,9 +21,11 @@ const Home = () => {
                 height="550"
                 alt="Destination"
               />
+
               <div className="card-body border-0">
                 <h5 className="card-title" style={{ fontSize: "25px", color: "#67001F" }}>
                   Explore Exciting Destinations with FlyHigh Airways
+
                 </h5>
               </div>
             </div>
@@ -72,10 +76,12 @@ const Home = () => {
 
       <div className="row">
         <div className="col-lg-6 align-items-center d-flex justify-content-center">
+
           <div className="text-center" style={{ width: "35rem" }}>
             <h1 style={{ color: "#67001F" }}>Discover Amazing Experiences with FlyHigh Airways</h1>
             <h5 style={{ color: "#666" }}>
               Embark on a journey, earn rewards, and enjoy the best adventures with FlyHigh Airways.
+
             </h5>
           </div>
         </div>
@@ -121,8 +127,10 @@ const Home = () => {
                   </div>
                   <div className="col-lg-6">
                     <div className="card-body">
+
                       <h5 className="card-title" style={{ color: "#67001F" }}>
                         Time Flies On Board FlyHigh Airways
+
                       </h5>
                       <p className="card-text" style={{ color: "#666" }}>
                         Sit back, relax and enjoy your flight with our onboard services. Learn more about our dining options, inflight entertainment.
@@ -165,8 +173,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       
-      <Footer />
+
       
     </>
   );

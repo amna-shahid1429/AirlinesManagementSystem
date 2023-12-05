@@ -18,7 +18,7 @@ const AddEditSchedule = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios.get(`http://localhost:3000/schedule/api/get/${id}`).then((resp) =>
+    Axios.get(`http://localhost:5000/schedule/api/get/${id}`).then((resp) =>
       setState({ ...resp.data[0] })
     );
   }, [id]);
@@ -29,7 +29,7 @@ const AddEditSchedule = () => {
       toast.error("Required Fields are empty");
     else {
       if (!id) {
-        Axios.post("http://localhost:3000/api/post", {
+        Axios.post("http://localhost:5000/api/post", {
           schedule_id,
           departure_time,
           arrival_time,
@@ -37,28 +37,28 @@ const AddEditSchedule = () => {
         })
           .then((response) => {
             setState({
-                schedule_id: "",
-                departure_time: "",
-                arrival_time: "",
-                duration_time: "",
+              schedule_id: "",
+              departure_time: "",
+              arrival_time: "",
+              duration_time: "",
             });
             if (response.data.err) console.log(response.data.err);
           })
           .catch((err) => toast.error(err.response.data));
         toast.success("Schedule Added Successfully");
       } else {
-        Axios.put(`http://localhost:3000/schedule/api/update/${id}`, {
-            schedule_id,
-            departure_time,
-            arrival_time,
-            duration_time,
+        Axios.put(`http://localhost:5000/schedule/api/update/${id}`, {
+          schedule_id,
+          departure_time,
+          arrival_time,
+          duration_time,
         })
           .then((response) => {
             setState({
-                schedule_id: "",
-                departure_time: "",
-                arrival_time: "",
-                duration_time: "",
+              schedule_id: "",
+              departure_time: "",
+              arrival_time: "",
+              duration_time: "",
             });
             if (response.data.err) console.log(response.data.err);
           })
