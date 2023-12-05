@@ -26,56 +26,35 @@ class Signin extends Component {
     });
   };
 
-  Login = (event) => {
-    event.preventDefault();
-    Axios.post("http://localhost:5000/login", {
-      username: this.state.usernameLogin,
-      password: this.state.passwordLogin,
-    }).then((response) => {
-      if (response.data.msg) {
-        Swal.fire("Invalid Login!", "", "error");
-      } else {
-        Swal.fire("Login Success!", "", "success");
-        setTimeout(() => this.props.history.push("/AdminPanel"), 500);
-      }
-    });
-  };
-  render() {
-    return (
-      <div className="Auth-form-container bg-image">
-        <form className="Auth-form" onSubmit={this.Login}>
-          <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
-            <div className="form-group mt-3">
-              <label>Username</label>
-              <input
-                type="username"
-                onChange={this.handleUsernameChange}
-                className="form-control mt-1"
-                placeholder="Username"
-                required
-                style={{ width: "320px" }}
-              />
-            </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                onChange={this.handlePasswordChange}
-                className="form-control mt-1"
-                placeholder="e.g rXhAz29$%1"
-                required
-                style={{ width: "320px" }}
-              />
-            </div>
-            <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
-            </div>
-            <p className="forgot-password text-right mt-2">
-              Forgot <a href="Home">password?</a>
-            </p>
+
+  }
+  render (){
+    return(
+    <div className="Auth-form-container bg-image">
+      <form className="Auth-form" onSubmit={this.Login}>
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Sign In</h3>
+          <div className="form-group mt-3">
+            <label>Username</label>
+            <input
+              type="username" onChange={this.handleUsernameChange}
+              className="form-control mt-1"
+              placeholder="Username" required style={{width:'320px'}}
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password" onChange={this.handlePasswordChange} 
+              className="form-control mt-1"
+              placeholder="e.g rXhAz29$%1" required style={{width:'320px'}}
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#67001F' }}>
+              Login
+            </button>
+
           </div>
         </form>
       </div>
