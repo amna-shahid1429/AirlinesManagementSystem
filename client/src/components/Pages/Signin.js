@@ -26,35 +26,43 @@ class Signin extends Component {
     });
   };
 
-
-  }
-  render (){
-    return(
-    <div className="Auth-form-container bg-image">
-      <form className="Auth-form" onSubmit={this.Login}>
-        <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
-          <div className="form-group mt-3">
-            <label>Username</label>
-            <input
-              type="username" onChange={this.handleUsernameChange}
-              className="form-control mt-1"
-              placeholder="Username" required style={{width:'320px'}}
-            />
-          </div>
-          <div className="form-group mt-3">
-            <label>Password</label>
-            <input
-              type="password" onChange={this.handlePasswordChange} 
-              className="form-control mt-1"
-              placeholder="e.g rXhAz29$%1" required style={{width:'320px'}}
-            />
-          </div>
-          <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#67001F' }}>
-              Login
-            </button>
-
+  render() {
+    return (
+      <div className="Auth-form-container bg-image">
+        <form className="Auth-form" onSubmit={this.Login}>
+          <div className="Auth-form-content">
+            <h3 className="Auth-form-title">Sign In</h3>
+            <div className="form-group mt-3">
+              <label>Username</label>
+              <input
+                type="username"
+                onChange={this.handleUsernameChange}
+                className="form-control mt-1"
+                placeholder="Username"
+                required
+                style={{ width: "320px" }}
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Password</label>
+              <input
+                type="password"
+                onChange={this.handlePasswordChange}
+                className="form-control mt-1"
+                placeholder="e.g rXhAz29$%1"
+                required
+                style={{ width: "320px" }}
+              />
+            </div>
+            <div className="d-grid gap-2 mt-3">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ backgroundColor: "#67001F" }}
+              >
+                Login
+              </button>
+            </div>
           </div>
         </form>
       </div>
