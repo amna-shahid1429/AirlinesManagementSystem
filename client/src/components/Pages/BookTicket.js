@@ -25,6 +25,7 @@ const BookTicket = () => {
     loadData();
   }, []);
   const { id } = useParams();
+
   // handle submit
   const onSubmit = (data) => {
     console.log(data.departure);
@@ -243,11 +244,11 @@ const BookTicket = () => {
                       })}
                     >
                       <option>All Prices</option>
-                      <option>$ 1000</option>
+                      {/* <option>$ 1000</option>
                       <option>$ 2000</option>
                       <option>$ 3000</option>
                       <option>$ 4000</option>
-                      <option>$ 5000</option>
+                      <option>$ 5000</option> */}
                     </select>
                   </div>
                   {/* <div>Error</div> */}
