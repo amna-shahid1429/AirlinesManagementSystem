@@ -434,7 +434,7 @@ app.post("/AvailableFlights", (req, res) => {
   console.log(fares.slice(2, 6));
 
   const sqlGet =
-    "select f.flight_no,s.schedule_id,f.airplane_id,a.max_seats,s.departure_time, s.arrival_time, fs.status,f.fares from Flight f inner join schedule_table s on s.schedule_id=f.schedule_id inner join FlightStatus fs on fs.flightStatus_id=f.flightStatus_id inner join airplane a on a.airplane_id=f.airplane_id where s.departure_time like  ? and s.arrival_time like ? and f.fares=?;";
+    "select f.flight_no,s.schedule_id,f.airplane_id,a.max_seats,s.departure_time, s.arrival_time, fs.status_flight,f.fares from Flight f inner join schedule_table s on s.schedule_id=f.schedule_id inner join FlightStatus fs on fs.flightStatus_id=f.flightStatus_id inner join airplane a on a.airplane_id=f.airplane_id where s.departure_time like  ? and s.arrival_time like ? and f.fares=?;";
   db.query(
     sqlGet,
     [departureDate + "%", returnDate + "%", fares.slice(2, 6)],

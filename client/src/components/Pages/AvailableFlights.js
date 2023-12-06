@@ -24,9 +24,9 @@ const AvailableFlights = () => {
     initialState.returnDate = response.data[0].returnDate;
     initialState.class = response.data[0].class;
     initialState.price = response.data[0].price;
-    console.log("fb_id: " + initialState.fb_id);
+    // console.log("fb_id: " + initialState.fb_id);
 
-    console.log("return: " + initialState.returnDate);
+    // console.log("return: " + initialState.returnDate);
     const Returnresponse = await Axios.post(
       "http://localhost:5000/AvailableFlights",
       {
@@ -43,6 +43,8 @@ const AvailableFlights = () => {
     loadData();
   }, []);
   const { id } = useParams();
+
+  console.log("Type of data:", Array.isArray(data) ? "Array" : "Not an Array");
 
   const voidFunc = () => {};
   return (
